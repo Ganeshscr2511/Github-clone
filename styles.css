@@ -206,7 +206,7 @@ p{
 .footer-copyrights{
     display: flex;
     justify-items: flex-start;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .footer-logo{
