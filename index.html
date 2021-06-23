@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GITHUB clone</title>
+    <link rel="icon" href="favicon.png" title="GitHub Clone">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <meta>
+
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+
+            <div class="container-fluid">
+
+                <div class="logo">
+                    <a href="#" rel="noopener noreferrer">
+                    <svg class="navbar-logo" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+                </div>
+
+              <button class="navbar-toggler float-sm-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M0 11H24V13H0zM0 2H24V4H0zM0 20H24V22H0z"/></svg></span>  
+            </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> 
+                <form class="Search-form">
+                      <input class="search-bar" id="search-bar" type="search" placeholder="  Search Github" oninput="searchClick()" keyup="searchfunction(event)">
+                    </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   <li class="nav-item text-white">
+                    <a class="nav-link link-light " style="font-weight: 600;" aria-current="page" href="#">Pull requests</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link link-light" style="font-weight: 600;" aria-current="page" href="#">Issues</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-light" style="font-weight: 600;" href="#">MarketPlace</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-light" style="font-weight: 600;" href="#">Explore</a>
+                  </li>
+                </li>
+                <li class="nav-item hidden .d-none .d-sm-block .d-md-none">
+                  <a class="nav-link link-light" style="font-weight: 600;" href="#">codespaces</a>
+                </li>
+                </li>
+                  <li class="nav-item hidden .d-none .d-sm-block .d-md-none">
+                    <a class="nav-link link-light" style="font-weight: 600;" href="#">Sponsors</a>
+                  </li>
+                </li>
+                <li class="nav-item hidden .d-none .d-sm-block .d-md-none">
+                  <a class="nav-link link-light" style="font-weight: 600;" href="#">Settings</a>
+                </li>
+                <li class="nav-item hidden .d-none .d-sm-block .d-md-none">
+                    <a class="nav-link link-light" style="font-weight: 600;" href="#">Settings</a>
+                  </li>
+                  
+                  <li class="nav-item hidden .d-none .d-sm-block .d-md-none">
+                    <a class="nav-link link-light" style="font-weight: 600;" href="#"><span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="16" width="16"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg></span> Sign out</a>
+                  </li>
+                  </ul>
+                </div>
+                  <div class="float-end nav-dropdown-end">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="navlinks">
+                            <a class=" navlinks " aria-current="page" href="#"><svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="navbar-logo">
+                                <path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path>
+                            </svg></a>
+                          </li> 
+                          <button type="button" data-bs-toggle="dropdown" class="dropdown-btn hidden-small" id="navbarDropdownMenuLink">
+                            <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1"  height="16" width="16" class="navbar-plus-dropdown">
+                            <path fill-rule="evenodd" d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"></path>
+                            </svg><span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" class="navbar-arrow" viewBox="0 0 24 24"><path d="M24 3l-12 18-12-18z"/></svg></span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">New repository</a></li>
+                              <li><a class="dropdown-item" href="#">Import repository</a></li>
+                              <li><a class="dropdown-item" href="#">New gist</a></li>
+                              <li><a class="dropdown-item" href="#">New organisation</a></li>
+                              <li><a class="dropdown-item" href="#">New project</a></li>
+                            </ul>
+                          </li> 
+                          <li class="navlinks hidden-small">
+                            <a class="nav-link navlinks" aria-current="page" href="#"><img src="images/82515080.png" alt="Profile-Picture" size="20" data-view-component="true" height="20" width="20" class="navbar-profile-dropdown">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" class="navbar-arrow" viewBox="0 0 24 24"><path d="M24 3l-12 18-12-18z"/></svg></span></a>
+                          </li> 
+                    </ul> 
+                </div>
+            </div>
+          </nav>
+        
+    </header>
+    
+
+    <main class="main">
+        <div class="grid-container">
+            
+            <aside class="menu item1">
+                <p class="item1-headings">Repositories</p>
+                <button class="item1btn"> <span><svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" fill ="#fff" class="">
+                    <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                </svg></span> New</button>
+                <div class="RepositoryNames">
+                    <input type="search" placeholder="Find a Repository" class="search-box">
+                    <div class="userRepositoryNames item1-contents">
+
+                    </div>
+                </div>
+                <hr>
+                <div class="recentActivity">
+                    <p class="item1-headings">Recent activity</p>
+                    <ul class="item1-contents">
+                        <li><a href="">extension</a></li>
+                    </ul> 
+                </div>
+                <div class="teamAd">
+                    <p class="item1-headings">Working with a team?</p>
+                    <p class="item1-contents">GitHub is built for collaboration. Set up an organization to improve the way your team works together, and get access to more features.</p>
+                </div>
+
+            </aside>
+            <div class="main item2">
+                <p>All activity</p>
+                <div class="allActivity">
+                    
+                    <div class="activity-box">
+                        <h1 class="item2-h1">Discover interesting projects and people to populate your personal news feed.</h1>
+                
+                        <p class="item2-p">Your news feed helps you keep up with recent activity on repositories you <span><a href="https://github.com/trending">watch</a> </span> or <span><a href="">star</a></span> and people you <span><a href="https://github.com/trending/developers">follow</a> </span>.</p>
+                        
+                        <button class="main-btn item2-btn"><a href="https://github.com/explore " class="main-btn">Explore GitHub</a></button>
+                    </div>
+                    
+
+                </div>
+                <div class="item2-tips">
+                    <p class="item2-tips-p"><span>
+                        <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"></path></svg>
+
+                    </span><strong>ProTip!</strong> The feed shows you events from people you follow and repositories you watch or star.</p>
+                    <a class="item-subscribe-a" href="https://github.com/Ganeshscr2511.private.atom?token=ATVRJCBKQ4TZ6FIWCOCJHKN63ZEHU">
+                        
+                            <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 01.797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 11-1.497.098 10.502 10.502 0 00-9.776-9.776.75.75 0 01-.7-.798zM2 13a1 1 0 112 0 1 1 0 01-2 0zm.84-5.95a.75.75 0 00-.179 1.489c2.509.3 4.5 2.291 4.8 4.8a.75.75 0 101.49-.178A7.003 7.003 0 002.838 7.05z"></path></svg>
+                            Subscribe to your news feed
+                    </a>
+                </div>
+                <footer class="footer">
+                        <div class="footer-copyrights">
+                            <svg height="24" class="footer-logo" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                           <span>© 2021 GitHub, Inc.</span> 
+                        </div>
+                        <div class=" footerlist-box ">
+                            <ul class="footer-list">
+                                <li><a href=""></a>Blog</li>
+                                <li><a href=""></a>About</li>
+                                <li><a href=""></a>Shop</li>
+                                <li><a href=""></a>Contact</li>
+                                <li><a href=""></a>Github</li>
+                                <li><a href=""></a>Pricing</li>
+    
+                            </ul>
+                            <ul class="footer-list">
+                                <li><a href=""></a>API</li>
+                                <li><a href=""></a>Training</li>
+                                <li><a href=""></a>Status</li>
+                                <li><a href=""></a>Security</li>
+                                
+                            </ul>
+                            <ul class="footer-list">
+                                <li><a href=""></a>Terms</li>
+                                <li><a href=""></a>Privacy</li>
+                                <li><a href=""></a>Docs</li>
+                            </ul>
+                        </div>
+                    
+                    
+                </footer> 
+            </div>            
+            <aside class="right item3">
+                <p>Explore repositories</p>
+                <div class="explore-repository">
+                    <div>
+                        <a class="item-3-links" href="https://github.com/mooniiDev/rock-paper-scissors-game"><strong>mooniiDev/rock-paper-scissors-game</strong></a>
+                        <p class="item3-content">Simple implementation of Rock Paper Scissors game</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <a class="item-3-links" href="https://github.com/developedbyed/weather-app"><strong>developedbyed/weather-app</strong></a>
+                        <p class="item3-content">Weather app with darksky api.</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <a class="item-3-links" href="https://github.com/gazaskygeeks/Fundamentals-course"><strong>gazaskygeeks/Fundamentals-course</strong></a>
+                        <p class="item3-content">Simple implementation of Rock Paper Scissors game</p>
+                    </div>
+                    <a class="item-3-links" href="https://github.com/explore">Explore More</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+
+
+
+</body>
+</html>
